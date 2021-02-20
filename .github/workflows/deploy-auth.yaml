@@ -15,7 +15,7 @@ jobs:
       - run: cd auth && docker build -t keithchow/auth .
       - run: docker login -u $DOCKER_NAME -p $DOCKER_PASSWORD
         env:
-          DOCKER_USERNAME: ${{ secret.DOCKER_NAME }}
+          DOCKER_USERNAME: ${{ secrets.DOCKER_NAME }}
           DOCKER_PASSWORD: ${{ secret.DOCKER_PASSWORD }}
           
       
